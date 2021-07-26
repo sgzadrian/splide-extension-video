@@ -3938,7 +3938,7 @@ var PLAYING_STATUS_CLASS_NAME = 'is-playing';
  */
 
 
-var _window = window || __webpack_require__.g;
+var _window = __webpack_require__.g || window;
 
 _window.splide = _window.splide || {};
 _window.splide.Extensions = _window.splide.Extensions || {};
