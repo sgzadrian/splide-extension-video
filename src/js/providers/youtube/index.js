@@ -23,8 +23,7 @@ export default class YouTube extends BaseProvider {
 	/**
 	 * YouTube constructor.
 	 *
-	 * @param {Splide} Splide     - A Splide instance.
-	 * @param {Object} Components - An object containing components.
+	 * @param {Splide} Splide     - A Splide instance.  @param {Object} Components - An object containing components.
 	 */
 	constructor( Splide, Components ) {
 		super( Splide, Components );
@@ -75,12 +74,14 @@ export default class YouTube extends BaseProvider {
 	 * Listen onYouTubeIframeAPIReady event.
 	 */
 	bindAPICallback() {
+		// Avoid SSR problems on other frameworks like Nuxt
+		let _window = window || global
 		// Avoid unexpected collision against other libraries.
-		if ( typeof window.onYouTubeIframeAPIReady !== 'undefined' ) {
-			this.oldCallback = window.onYouTubeIframeAPIReady;
+		if ( typeof _window.onYouTubeIframeAPIReady !== 'undefined' ) {
+			this.oldCallback = _window.onYouTubeIframeAPIReady;
 		}
 
-		window.onYouTubeIframeAPIReady = this.onYouTubeIframeAPIReady.bind( this );
+		_window.onYouTubeIframeAPIReady = this.onYouTubeIframeAPIReady.bind( this );
 	}
 
 	/**

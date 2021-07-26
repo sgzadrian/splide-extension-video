@@ -7,6 +7,7 @@
 
 import Video from '../../src/js/splide-extension-video';
 
-window.splide = window.splide || {};
-window.splide.Extensions = window.splide.Extensions || {};
-window.splide.Extensions.Video = Video;
+let _window = window || global
+_window.splide = _window.splide || {};
+_window.splide.Extensions = _window.splide.Extensions || {};
+_window.splide.Extensions.Video = Video;

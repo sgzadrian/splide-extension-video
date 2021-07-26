@@ -17,8 +17,9 @@
 /******/ 	})();
 /******/ 	
 /************************************************************************/
+var __webpack_exports__ = {};
 
-// CONCATENATED MODULE: ./src/js/utils/index.js
+;// CONCATENATED MODULE: ./src/js/utils/index.js
 /**
  * Utility export functions.
  *
@@ -37,14 +38,14 @@ function each(obj, callback) {
     return callback(obj[key], key, index);
   });
 }
-// CONCATENATED MODULE: ./src/js/providers/base/base-provider.js
+;// CONCATENATED MODULE: ./src/js/providers/base/base-provider.js
 /**
  * The base class for the provider.
  *
  * @author    Naotoshi Fujita
  * @copyright Naotoshi Fujita. All rights reserved.
  */
-;
+
 /**
  * The sub component for the provider.
  */
@@ -115,7 +116,7 @@ var BaseProvider = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/elements/index.js
+;// CONCATENATED MODULE: ./src/js/elements/index.js
 /**
  * The sub component for creating UI elements.
  *
@@ -279,7 +280,7 @@ var PLAY_BUTTON_CLASS = 'splide__video__play';
 
   return Elements;
 });
-// CONCATENATED MODULE: ./src/js/utils/state.js
+;// CONCATENATED MODULE: ./src/js/utils/state.js
 /**
  * The function providing a super simple state system.
  *
@@ -327,7 +328,7 @@ var PLAY_BUTTON_CLASS = 'splide__video__play';
     }
   };
 });
-// CONCATENATED MODULE: ./src/js/constants/states.js
+;// CONCATENATED MODULE: ./src/js/constants/states.js
 /**
  * Export state constants.
  *
@@ -383,14 +384,14 @@ var PLAY_REQUEST_ABORTED = 6;
  */
 
 var PLAYING = 7;
-// CONCATENATED MODULE: ./src/js/providers/base/base-player.js
+;// CONCATENATED MODULE: ./src/js/providers/base/base-player.js
 /**
  * The base class of the video player.
  *
  * @author    Naotoshi Fujita
  * @copyright Naotoshi Fujita. All rights reserved.
  */
-;
+
 
 
 /**
@@ -710,8 +711,10 @@ var BasePlayer = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/providers/html-video/player.js
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+;// CONCATENATED MODULE: ./src/js/providers/html-video/player.js
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 /**
  * The class for controlling a HTML video.
@@ -811,8 +814,10 @@ var Player = /*#__PURE__*/function (_BasePlayer) {
 }(BasePlayer);
 
 
-// CONCATENATED MODULE: ./src/js/providers/html-video/index.js
-function html_video_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+;// CONCATENATED MODULE: ./src/js/providers/html-video/index.js
+function html_video_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; html_video_setPrototypeOf(subClass, superClass); }
+
+function html_video_setPrototypeOf(o, p) { html_video_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return html_video_setPrototypeOf(o, p); }
 
 /**
  * The sub component for embedding a HTML video.
@@ -849,10 +854,12 @@ var HTMLVideo = /*#__PURE__*/function (_BaseProvider) {
 }(BaseProvider);
 
 
-// CONCATENATED MODULE: ./src/js/providers/youtube/player.js
+;// CONCATENATED MODULE: ./src/js/providers/youtube/player.js
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function player_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+function player_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; player_setPrototypeOf(subClass, superClass); }
+
+function player_setPrototypeOf(o, p) { player_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return player_setPrototypeOf(o, p); }
 
 /**
  * The class for controlling YouTube video.
@@ -992,8 +999,10 @@ var player_Player = /*#__PURE__*/function (_BasePlayer) {
 }(BasePlayer);
 
 
-// CONCATENATED MODULE: ./src/js/providers/youtube/index.js
-function youtube_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+;// CONCATENATED MODULE: ./src/js/providers/youtube/index.js
+function youtube_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; youtube_setPrototypeOf(subClass, superClass); }
+
+function youtube_setPrototypeOf(o, p) { youtube_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return youtube_setPrototypeOf(o, p); }
 
 /**
  * The sub component for embedding a YouTube video.
@@ -1020,8 +1029,7 @@ var YouTube = /*#__PURE__*/function (_BaseProvider) {
   /**
    * YouTube constructor.
    *
-   * @param {Splide} Splide     - A Splide instance.
-   * @param {Object} Components - An object containing components.
+   * @param {Splide} Splide     - A Splide instance.  @param {Object} Components - An object containing components.
    */
   function YouTube(Splide, Components) {
     var _this;
@@ -1043,8 +1051,8 @@ var YouTube = /*#__PURE__*/function (_BaseProvider) {
   var _proto = YouTube.prototype;
 
   _proto.loadAPI = function loadAPI() {
-    var _window = window,
-        YT = _window.YT;
+    var _window2 = window,
+        YT = _window2.YT;
 
     if (this.shouldLoadAPI()) {
       var tag = document.createElement('script');
@@ -1082,12 +1090,15 @@ var YouTube = /*#__PURE__*/function (_BaseProvider) {
   ;
 
   _proto.bindAPICallback = function bindAPICallback() {
-    // Avoid unexpected collision against other libraries.
-    if (typeof window.onYouTubeIframeAPIReady !== 'undefined') {
-      this.oldCallback = window.onYouTubeIframeAPIReady;
+    // Avoid SSR problems on other frameworks like Nuxt
+    var _window = window || __webpack_require__.g; // Avoid unexpected collision against other libraries.
+
+
+    if (typeof _window.onYouTubeIframeAPIReady !== 'undefined') {
+      this.oldCallback = _window.onYouTubeIframeAPIReady;
     }
 
-    window.onYouTubeIframeAPIReady = this.onYouTubeIframeAPIReady.bind(this);
+    _window.onYouTubeIframeAPIReady = this.onYouTubeIframeAPIReady.bind(this);
   }
   /**
    * Called when the API is ready.
@@ -1114,8 +1125,8 @@ var YouTube = /*#__PURE__*/function (_BaseProvider) {
 }(BaseProvider);
 
 
-// CONCATENATED MODULE: ./node_modules/@vimeo/player/dist/player.es.js
-/*! @vimeo/player v2.14.1 | (c) 2020 Vimeo | MIT License | https://github.com/vimeo/player.js */
+;// CONCATENATED MODULE: ./node_modules/@vimeo/player/dist/player.es.js
+/*! @vimeo/player v2.15.3 | (c) 2021 Vimeo | MIT License | https://github.com/vimeo/player.js */
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -2771,6 +2782,36 @@ var player_es_Player = /*#__PURE__*/function () {
       return this.get('fullscreen');
     }
     /**
+     * Request that the player enters picture-in-picture.
+     * @return {Promise}
+     */
+
+  }, {
+    key: "requestPictureInPicture",
+    value: function requestPictureInPicture() {
+      return this.callMethod('requestPictureInPicture');
+    }
+    /**
+     * Request that the player exits picture-in-picture.
+     * @return {Promise}
+     */
+
+  }, {
+    key: "exitPictureInPicture",
+    value: function exitPictureInPicture() {
+      return this.callMethod('exitPictureInPicture');
+    }
+    /**
+     * Returns true if the player is currently picture-in-picture.
+     * @return {Promise}
+     */
+
+  }, {
+    key: "getPictureInPicture",
+    value: function getPictureInPicture() {
+      return this.get('pictureInPicture');
+    }
+    /**
      * A promise to unload the video.
      *
      * @promise UnloadPromise
@@ -2813,7 +2854,13 @@ var player_es_Player = /*#__PURE__*/function () {
         }
 
         if (_this5.element && _this5.element.nodeName === 'IFRAME' && _this5.element.parentNode) {
-          _this5.element.parentNode.removeChild(_this5.element);
+          // If we've added an additional wrapper div, remove that from the DOM.
+          // If not, just remove the iframe element.
+          if (_this5.element.parentNode.parentNode && _this5._originalElement && _this5._originalElement !== _this5.element.parentNode) {
+            _this5.element.parentNode.parentNode.removeChild(_this5.element.parentNode);
+          } else {
+            _this5.element.parentNode.removeChild(_this5.element);
+          }
         } // If the clip is private there is a case where the element stays the
         // div element. Destroy should reset the div and remove the iframe child.
 
@@ -2824,7 +2871,13 @@ var player_es_Player = /*#__PURE__*/function () {
           var iframe = _this5.element.querySelector('iframe');
 
           if (iframe && iframe.parentNode) {
-            iframe.parentNode.removeChild(iframe);
+            // If we've added an additional wrapper div, remove that from the DOM.
+            // If not, just remove the iframe element.
+            if (iframe.parentNode.parentNode && _this5._originalElement && _this5._originalElement !== iframe.parentNode) {
+              iframe.parentNode.parentNode.removeChild(iframe.parentNode);
+            } else {
+              iframe.parentNode.removeChild(iframe);
+            }
           }
         }
 
@@ -3578,10 +3631,12 @@ if (!isNode) {
 
 /* harmony default export */ const player_es = (player_es_Player);
 
-// CONCATENATED MODULE: ./src/js/providers/vimeo/player.js
+;// CONCATENATED MODULE: ./src/js/providers/vimeo/player.js
 function player_extends() { player_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return player_extends.apply(this, arguments); }
 
-function vimeo_player_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+function vimeo_player_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; vimeo_player_setPrototypeOf(subClass, superClass); }
+
+function vimeo_player_setPrototypeOf(o, p) { vimeo_player_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return vimeo_player_setPrototypeOf(o, p); }
 
 /**
  * The class for controlling Vimeo video.
@@ -3670,8 +3725,10 @@ var vimeo_player_Player = /*#__PURE__*/function (_BasePlayer) {
 }(BasePlayer);
 
 
-// CONCATENATED MODULE: ./src/js/providers/vimeo/index.js
-function vimeo_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+;// CONCATENATED MODULE: ./src/js/providers/vimeo/index.js
+function vimeo_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; vimeo_setPrototypeOf(subClass, superClass); }
+
+function vimeo_setPrototypeOf(o, p) { vimeo_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return vimeo_setPrototypeOf(o, p); }
 
 /**
  * The sub component for embedding a Vimeo video.
@@ -3708,14 +3765,14 @@ var Vimeo = /*#__PURE__*/function (_BaseProvider) {
 }(BaseProvider);
 
 
-// CONCATENATED MODULE: ./src/js/providers/index.js
+;// CONCATENATED MODULE: ./src/js/providers/index.js
 /**
  * Export provider classes.
  *
  * @author    Naotoshi Fujita
  * @copyright Naotoshi Fujita. All rights reserved.
  */
-;
+
 
 
 var PROVIDERS = {
@@ -3723,7 +3780,7 @@ var PROVIDERS = {
   YouTube: YouTube,
   Vimeo: Vimeo
 };
-// CONCATENATED MODULE: ./src/js/constants/defaults.js
+;// CONCATENATED MODULE: ./src/js/constants/defaults.js
 /**
  * Export default options.
  *
@@ -3783,7 +3840,7 @@ var DEFAULTS = {
    */
   playerOptions: {}
 };
-// CONCATENATED MODULE: ./src/js/splide-extension-video.js
+;// CONCATENATED MODULE: ./src/js/splide-extension-video.js
 function splide_extension_video_extends() { splide_extension_video_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return splide_extension_video_extends.apply(this, arguments); }
 
 /**
@@ -3872,16 +3929,19 @@ var PLAYING_STATUS_CLASS_NAME = 'is-playing';
 
   return Video;
 });
-// CONCATENATED MODULE: ./build/global/global.js
+;// CONCATENATED MODULE: ./build/global/global.js
 /**
  * Set the Video extension to the global object.
  *
  * @author    Naotoshi Fujita
  * @copyright Naotoshi Fujita. All rights reserved.
  */
-;
-window.splide = window.splide || {};
-window.splide.Extensions = window.splide.Extensions || {};
-window.splide.Extensions.Video = splide_extension_video;
+
+
+var _window = window || __webpack_require__.g;
+
+_window.splide = _window.splide || {};
+_window.splide.Extensions = _window.splide.Extensions || {};
+_window.splide.Extensions.Video = splide_extension_video;
 /******/ })()
 ;
