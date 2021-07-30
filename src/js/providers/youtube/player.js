@@ -23,17 +23,20 @@ export default class Player extends BasePlayer {
 		const options = this.Splide.options.video;
 		const { youtube = {} } = options.playerOptions;
 
+		let YToptions = {
+			controls      : options.hideControls ? 0 : 1,
+			iv_load_policy: 3,
+			loop          : options.loop,
+			rel           : 0,
+			autoplay      : false,
+			...youtube,
+		};
+		if ( options.loop ) {
+			YToptions.playlist = this.videoId;
+		}
 		const player = new YT.Player( this.elements.iframe, {
 			videoId: this.videoId,
-			playerVars: {
-				controls      : options.hideControls ? 0 : 1,
-				iv_load_policy: 3,
-				loop          : options.loop,
-				playlist      : options.loop ? this.videoId : '',
-				rel           : 0,
-				autoplay      : false,
-				...youtube,
-			},
+			playerVars: YToptions,
 			events: {
 				'onReady': e => {
 					this.onPlayerReady( e );

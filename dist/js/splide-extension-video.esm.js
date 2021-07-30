@@ -943,16 +943,22 @@ var player_Player = /*#__PURE__*/function (_BasePlayer) {
     var options = this.Splide.options.video;
     var _options$playerOption = options.playerOptions.youtube,
         youtube = _options$playerOption === void 0 ? {} : _options$playerOption;
+
+    var YToptions = _extends({
+      controls: options.hideControls ? 0 : 1,
+      iv_load_policy: 3,
+      loop: options.loop,
+      rel: 0,
+      autoplay: false
+    }, youtube);
+
+    if (options.loop) {
+      YToptions.playlist = this.videoId;
+    }
+
     var player = new YT.Player(this.elements.iframe, {
       videoId: this.videoId,
-      playerVars: _extends({
-        controls: options.hideControls ? 0 : 1,
-        iv_load_policy: 3,
-        loop: options.loop,
-        playlist: options.loop ? this.videoId : '',
-        rel: 0,
-        autoplay: false
-      }, youtube),
+      playerVars: YToptions,
       events: {
         'onReady': function onReady(e) {
           _this.onPlayerReady(e);
